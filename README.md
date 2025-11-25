@@ -1,7 +1,7 @@
 # AI-Based-Cyber-Security-Threats-Prediction-AI-Agent
   
 
-## PROJECT STATEMENT 
+## PROJECT STATEMENTS 
 - Develop agentic AI systems as tireless guardians of network security  
 - Enable autonomous monitoring of network traffic to detect anomalies  
 - Provide real-time response to cyber threats without human oversight  
