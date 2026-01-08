@@ -290,10 +290,10 @@ threat_doctor_messages	Individual chat messages
 
 
 ## System
-Table	Description
-monitoring_status	System monitoring state
-export_history	Export operation records
-realtime_logs	System log storage
+ - Table	Description
+ - monitoring_status	System monitoring state
+ - export_history	Export operation records
+ - realtime_logs	System log storage
 
 
 ## Edge Functions
@@ -311,20 +311,20 @@ multi-agent-analysis	/functions/v1/multi-agent-analysis	Multi-agent threat analy
 
 ## Security
 
-Authentication
--JWT-based authentication via Supabase Auth
--Secure session management with auto-refresh
--Protected routes for authenticated users
+# Authentication
+- JWT-based authentication via Supabase Auth
+- Secure session management with auto-refresh
+- Protected routes for authenticated users
 
-Authorization
--Role-based access control (RBAC)
--Three roles: admin, analyst, viewer
--Row Level Security (RLS) policies on all tables
+# Authorization
+- Role-based access control (RBAC)
+- Three roles: admin, analyst, viewer
+- Row Level Security (RLS) policies on all tables
 
-Data Protection
--All API keys stored as environment variables
--Sensitive operations require admin role
--Comprehensive audit logging
+# Data Protection
+- All API keys stored as environment variables
+- Sensitive operations require admin role
+- Comprehensive audit logging
 
 See SECURITY.md for security policy and vulnerability reporting.
 
