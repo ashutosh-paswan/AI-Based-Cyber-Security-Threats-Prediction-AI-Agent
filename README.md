@@ -24,162 +24,14 @@ ThreatPredict is a comprehensive, enterprise-grade cybersecurity monitoring and 
 - Real-time detection and response to cyber threats  
 - Reduced workload for human security experts  
 - Improved organizational resilience against evolving threats  
-- Scalable and adaptive security operation
-  
+-  Scalable and adaptive security operation
+
 
 ## Architecture 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              CLIENT LAYER (React SPA)                           │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐                │
-│  │  Dashboard  │ │  Scanners   │ │  Monitoring │ │  AI Tools   │                │
-│  │  ─────────  │ │  ─────────  │ │  ─────────  │ │  ─────────  │                │
-│  │ • Stats     │ │ • Website   │ │ • Live Map  │ │ • Threat    │                │
-│  │ • Charts    │ │ • API       │ │ • 3D Globe  │ │   Doctor    │                │
-│  │ • Alerts    │ │ • QR Code   │ │ • Analytics │ │ • Predict   │                │
-│  │ • Actions   │ │ • Static    │ │ • Feed      │ │   ions      │                │
-│  └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘                │
-│                                                                                 │
-│  ┌──────────────────────────────────────────────────────────────────────────┐   │
-│  │                        SHARED COMPONENTS                                 │   │
-│  │  AppLayout • ProtectedRoute • Charts • Cards • Tables • Forms            │   │
-│  └──────────────────────────────────────────────────────────────────────────┘   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                              STATE MANAGEMENT                                   │
-│  ┌──────────────┐  ┌───────────────┐  ┌─────────────────┐                       │
-│  │ TanStack     │  │ React Hooks   │  │ Real-time       │                       │
-│  │ Query        │  │ (Auth, Stats) │  │ Subscriptions   │                       │
-│  └──────────────┘  └───────────────┘  └─────────────────┘                       │
-└─────────────────────────────────────────────────────────────────────────────────┘
-                                        │
-                                        ▼
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                            SUPABASE BACKEND                                     │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────────────────────────┐    │
-│  │                         EDGE FUNCTIONS (Deno)                           │    │
-│  │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    │    │
-│  │  │ scan-website │ │ scan-api     │ │ analyze-qr   │ │ scan-static  │    │    │
-│  │  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘    │    │
-│  │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    │    │
-│  │  │threat-doctor │ │ live-threat  │ │ block-entity │ │ export-cloud │    │    │
-│  │  │    -chat     │ │   -stream    │ │              │ │              │    │    │
-│  │  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘    │    │
-│  └─────────────────────────────────────────────────────────────────────────┘    │
-│                                                                                 │
-│  ┌─────────────────────────────────────────────────────────────────────────┐    │
-│  │                         POSTGRESQL DATABASE                             │    │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐            │    │
-│  │  │live_attacks│ │ incidents  │ │ profiles   │ │ user_roles │            │    │
-│  │  └────────────┘ └────────────┘ └────────────┘ └────────────┘            │    │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐            │    │
-│  │  │blocked_*   │ │scan_results│ │audit_logs  │ │threat_doc* │            │    │
-│  │  └────────────┘ └────────────┘ └────────────┘ └────────────┘            │    │
-│  └─────────────────────────────────────────────────────────────────────────┘    │
-│                                                                                 │
-│  ┌─────────────────────────────────────────────────────────────────────────┐    │
-│  │                         AUTHENTICATION (RLS)                            │    │
-│  │  • JWT-based authentication    • Row Level Security policies            │    │
-│  │  • Role-based access control   • Secure session management              │    │
-│  └─────────────────────────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────────────────────────┘
-                                        │
-                                        ▼
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           EXTERNAL INTEGRATIONS                                 │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐                           │
-│  │ Lovable AI   │  │ Gemini API   │  │ Threat Intel │                           │
-│  │ Gateway      │  │ (Summaries)  │  │ Feeds        │                           │
-│  └──────────────┘  └──────────────┘  └──────────────┘                           │
-└─────────────────────────────────────────────────────────────────────────────────┘
+https://github.com/ashutosh-paswan/AI-Based-Cyber-Security-Threats-Prediction-AI-Agent/blob/e5d34ea0c112d824c799a06b15594c63866d1942/Architecture.png
 
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              CLIENT LAYER (React SPA)                           │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐                │
-│  │  Dashboard  │ │  Scanners   │ │  Monitoring │ │  AI Tools   │                │
-│  │  ─────────  │ │  ─────────  │ │  ─────────  │ │  ─────────  │                │
-│  │ • Stats     │ │ • Website   │ │ • Live Map  │ │ • Threat    │                │
-│  │ • Charts    │ │ • API       │ │ • 3D Globe  │ │   Doctor    │                │
-│  │ • Alerts    │ │ • QR Code   │ │ • Analytics │ │ • Predict   │                │
-│  │ • Actions   │ │ • Static    │ │ • Feed      │ │   ions      │                │
-│  └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘                │
-│                                                                                 │
-│  ┌──────────────────────────────────────────────────────────────────────────┐   │
-│  │                        SHARED COMPONENTS                                 │   │
-│  │  AppLayout • ProtectedRoute • Charts • Cards • Tables • Forms            │   │
-│  └──────────────────────────────────────────────────────────────────────────┘   │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                              STATE MANAGEMENT                                   │
-│  ┌──────────────┐  ┌───────────────┐  ┌─────────────────┐                       │
-│  │ TanStack     │  │ React Hooks   │  │ Real-time       │                       │
-│  │ Query        │  │ (Auth, Stats) │  │ Subscriptions   │                       │
-│  └──────────────┘  └───────────────┘  └─────────────────┘                       │
-└─────────────────────────────────────────────────────────────────────────────────┘
-                                        │
-                                        ▼
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                            SUPABASE BACKEND                                     │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────────────────────────┐    │
-│  │                         EDGE FUNCTIONS (Deno)                           │    │
-│  │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    │    │
-│  │  │ scan-website │ │ scan-api     │ │ analyze-qr   │ │ scan-static  │    │    │
-│  │  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘    │    │
-│  │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐    │    │
-│  │  │threat-doctor │ │ live-threat  │ │ block-entity │ │ export-cloud │    │    │
-│  │  │    -chat     │ │   -stream    │ │              │ │              │    │    │
-│  │  └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘    │    │
-│  └─────────────────────────────────────────────────────────────────────────┘    │
-│                                                                                 │
-│  ┌─────────────────────────────────────────────────────────────────────────┐    │
-│  │                         POSTGRESQL DATABASE                             │    │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐            │    │
-│  │  │live_attacks│ │ incidents  │ │ profiles   │ │ user_roles │            │    │
-│  │  └────────────┘ └────────────┘ └────────────┘ └────────────┘            │    │
-│  │  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐            │    │
-│  │  │blocked_*   │ │scan_results│ │audit_logs  │ │threat_doc* │            │    │
-│  │  └────────────┘ └────────────┘ └────────────┘ └────────────┘            │    │
-│  └─────────────────────────────────────────────────────────────────────────┘    │
-│                                                                                 │
-│  ┌─────────────────────────────────────────────────────────────────────────┐    │
-│  │                         AUTHENTICATION (RLS)                            │    │
-│  │  • JWT-based authentication    • Row Level Security policies            │    │
-│  │  • Role-based access control   • Secure session management              │    │
-│  └─────────────────────────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────────────────────────┘
-                                        │
-                                        ▼
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           EXTERNAL INTEGRATIONS                                 │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐                           │
-│  │ Lovable AI   │  │ Gemini API   │  │ Threat Intel │                           │
-│  │ Gateway      │  │ (Summaries)  │  │ Feeds        │                           │
-│  └──────────────┘  └──────────────┘  └──────────────┘                           │
-└─────────────────────────────────────────────────────────────────────────────────┘
-
-
-## Data Flow
-User Request → React Router → Page Component → Custom Hook → Supabase Client
-                                                    │
-                    ┌───────────────────────────────┼───────────────────────────────┐
-                    │                               │                               │
-                    ▼                               ▼                               ▼
-            Edge Function                   Database Query                  Real-time
-            (scan-*, chat)                  (SELECT/INSERT)                 Subscription
-                    │                               │                               │
-                    └───────────────────────────────┼───────────────────────────────┘
-                                                    │
-                                                    ▼
-                                            Response/Update
-                                                    │
-                                                    ▼
-                                         UI State Update → Re-render
-
-                                         
 
 ## Project Structure
-
 threat-predict/
 ├── public/                    # Static assets
 │   ├── favicon.svg
@@ -250,7 +102,7 @@ threat-predict/
 ├── tailwind.config.ts       # Tailwind configuration
 └── vite.config.ts           # Vite configuration
 
-
+  
 ## AI-Powered Intelligence
  - ThreatDoctor Chat: Interactive AI assistant for security guidance with conversation persistence
  - Threat Predictions: ML-driven analysis anticipating potential breaches
@@ -295,19 +147,6 @@ threat_doctor_messages	Individual chat messages
  - export_history	Export operation records
  - realtime_logs	System log storage
 
-
-## Edge Functions
-Function	Endpoint	Purpose
-threat-doctor-chat	/functions/v1/threat-doctor-chat	AI chat assistant
-live-threat-stream	/functions/v1/live-threat-stream	Real-time threat data
-scan-website	/functions/v1/scan-website	Website vulnerability scan
-scan-api	/functions/v1/scan-api	API security audit
-analyze-qr	/functions/v1/analyze-qr	QR code analysis
-scan-static	/functions/v1/scan-static	Static file analysis
-block-entity	/functions/v1/block-entity	Block IP/domain
-monitor-control	/functions/v1/monitor-control	Monitoring state control
-export-to-cloud	/functions/v1/export-to-cloud	Data export service
-multi-agent-analysis	/functions/v1/multi-agent-analysis	Multi-agent threat analysis
 
 ## Security
 
