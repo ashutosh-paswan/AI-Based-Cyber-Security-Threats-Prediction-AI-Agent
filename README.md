@@ -333,13 +333,12 @@ See SECURITY.md for security policy and vulnerability reporting.
 
 Contributions are welcome! Please follow these steps:
 
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
+ - Fork the repository
+ - Create a feature branch (git checkout -b feature/amazing-feature)
+ - Commit your changes (git commit -m 'Add amazing feature')
+ - Push to the branch (git push origin feature/amazing-feature)
 
-
+   
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.txt file for details.
