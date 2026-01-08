@@ -28,81 +28,9 @@ ThreatPredict is a comprehensive, enterprise-grade cybersecurity monitoring and 
 
 
 ## Architecture 
-https://github.com/ashutosh-paswan/AI-Based-Cyber-Security-Threats-Prediction-AI-Agent/blob/e5d34ea0c112d824c799a06b15594c63866d1942/Architecture.png
+ ![Image Alt](https://github.com/ashutosh-paswan/AI-Based-Cyber-Security-Threats-Prediction-AI-Agent/blob/e5d34ea0c112d824c799a06b15594c63866d1942/Architecture.png)
 
-
-## Project Structure
-threat-predict/
-├── public/                    # Static assets
-│   ├── favicon.svg
-│   └── robots.txt
-├── src/
-│   ├── components/           # React components
-│   │   ├── ai/              # AI-related components
-│   │   │   └── MarkdownMessage.tsx
-│   │   ├── dashboard/       # Dashboard widgets
-│   │   │   ├── RiskGauge.tsx
-│   │   │   ├── StatCard.tsx
-│   │   │   ├── ThreatChart.tsx
-│   │   │   └── ThreatFeed.tsx
-│   │   ├── layout/          # Layout components
-│   │   │   └── AppLayout.tsx
-│   │   └── ui/              # shadcn/ui components
-│   ├── hooks/               # Custom React hooks
-│   │   ├── useAuth.ts       # Authentication hook
-│   │   ├── useLiveThreatData.ts
-│   │   ├── useSecurityStats.ts
-│   │   └── useThreatDoctorChat.ts
-│   ├── integrations/        # Third-party integrations
-│   │   └── supabase/
-│   │       ├── client.ts    # Supabase client
-│   │       └── types.ts     # Generated types
-│   ├── lib/                 # Utility functions
-│   │   └── utils.ts
-│   ├── pages/               # Page components
-│   │   ├── ai/             # AI features
-│   │   │   ├── Predictions.tsx
-│   │   │   └── ThreatDoctor.tsx
-│   │   ├── monitor/        # Monitoring views
-│   │   │   ├── Analytics.tsx
-│   │   │   ├── BlockedAttacks.tsx
-│   │   │   ├── GlobeView.tsx
-│   │   │   ├── LiveMap.tsx
-│   │   │   └── ThreatFeed.tsx
-│   │   ├── scanner/        # Security scanners
-│   │   │   ├── APIScanner.tsx
-│   │   │   ├── QRScanner.tsx
-│   │   │   ├── StaticScanner.tsx
-│   │   │   └── WebsiteScanner.tsx
-│   │   ├── users/          # User management
-│   │   │   └── Roles.tsx
-│   │   ├── Auth.tsx
-│   │   ├── Dashboard.tsx
-│   │   ├── Incidents.tsx
-│   │   ├── Landing.tsx
-│   │   ├── Settings.tsx
-│   │   └── Users.tsx
-│   ├── App.tsx              # Main app component
-│   ├── index.css            # Global styles
-│   └── main.tsx             # Entry point
-├── supabase/
-│   ├── functions/           # Edge functions
-│   │   ├── analyze-qr/
-│   │   ├── block-entity/
-│   │   ├── export-to-cloud/
-│   │   ├── live-threat-stream/
-│   │   ├── monitor-control/
-│   │   ├── multi-agent-analysis/
-│   │   ├── scan-api/
-│   │   ├── scan-static/
-│   │   ├── scan-website/
-│   │   └── threat-doctor-chat/
-│   └── config.toml          # Supabase config
-├── .env                      # Environment variables
-├── tailwind.config.ts       # Tailwind configuration
-└── vite.config.ts           # Vite configuration
-
-  
+ 
 ## AI-Powered Intelligence
  - ThreatDoctor Chat: Interactive AI assistant for security guidance with conversation persistence
  - Threat Predictions: ML-driven analysis anticipating potential breaches
@@ -116,25 +44,7 @@ threat-predict/
  - Audit Logging: Comprehensive activity tracking
  - Export History: Track and manage data exports
 
-
-## Database Schema
-Core Tables
-Table	Description
-live_attacks	Real-time attack data with geolocation
-blocked_attacks	History of blocked attacks
-blocked_entities	Blocked IPs/domains
-incidents	Security incident records
-scan_results	Scanner output storage
-threats	Threat intelligence data
-
-
-## User Management
-Table	Description
-profiles	User profile information
-user_roles	Role assignments (admin/analyst/viewer)
-audit_logs	User activity audit trail
-
-
+ 
 ## AI Features
 Table	Description
 threat_doctor_conversations	Chat conversation metadata
