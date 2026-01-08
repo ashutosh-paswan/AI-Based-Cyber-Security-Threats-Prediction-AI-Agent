@@ -251,6 +251,19 @@ threat-predict/
 └── vite.config.ts           # Vite configuration
 
 
+## AI-Powered Intelligence
+ - ThreatDoctor Chat: Interactive AI assistant for security guidance with conversation persistence
+ - Threat Predictions: ML-driven analysis anticipating potential breaches
+ - Auto-generated Recommendations: Context-aware security suggestions
+ - Markdown Rendering: Rich text responses with syntax-highlighted code blocks
+
+
+## Enterprise Management
+ - Role-Based Access Control: Admin, Analyst, Viewer roles
+ - User Management: Complete user lifecycle management
+ - Audit Logging: Comprehensive activity tracking
+ - Export History: Track and manage data exports
+
 
 ## Database Schema
 Core Tables
