@@ -3,15 +3,17 @@
 ThreatPredict is a comprehensive, enterprise-grade cybersecurity monitoring and threat intelligence platform. It combines real-time attack visualization, AI-powered threat prediction, and multi-modal security scanning to provide security teams with actionable insights and rapid incident response capabilities.
 
 
-https://github.com/ashutosh-paswan/AI-Based-Cyber-Security-Threats-Prediction-AI-Agent/blob/29a8d9e7ec05c9e46aa1cb9151c36f9d1e37f399/Demo_Video.mp4
+
+ https://github.com/user-attachments/assets/f9ce6a0c-2516-4ed9-ab89-ff482431af91
+
 
   
 ## PROJECT STATEMENTS 
-- Develop agentic AI systems as tireless guardians of network security  
-- Enable autonomous monitoring of network traffic to detect anomalies  
-- Provide real-time response to cyber threats without human oversight  
-- Reduce the workload of human experts, allowing focus on complex challenges  
-- Strengthen the overall organizational security posture and resilience
+ - Develop agentic AI systems as tireless guardians of network security  
+ - Enable autonomous monitoring of network traffic to detect anomalies  
+ - Provide real-time response to cyber threats without human oversight  
+ - Reduce the workload of human experts, allowing focus on complex challenges  
+ - Strengthen the overall organizational security posture and resilience
 
 ## Key Features
  - Real-time Threat Monitoring
@@ -23,11 +25,11 @@ https://github.com/ashutosh-paswan/AI-Based-Cyber-Security-Threats-Prediction-AI
 
 
 ## OUTCOMES 
-- 24/7 autonomous monitoring of network traffic  
-- Real-time detection and response to cyber threats  
-- Reduced workload for human security experts  
-- Improved organizational resilience against evolving threats  
--  Scalable and adaptive security operation
+ - 24/7 autonomous monitoring of network traffic  
+ - Real-time detection and response to cyber threats  
+ - Reduced workload for human security experts  
+ - Improved organizational resilience against evolving threats  
+ -  Scalable and adaptive security operation
 
 
 ## Architecture 
@@ -58,26 +60,26 @@ https://github.com/ashutosh-paswan/AI-Based-Cyber-Security-Threats-Prediction-AI
 ## Security
 
 # Authentication
-- JWT-based authentication via Supabase Auth
-- Secure session management with auto-refresh
-- Protected routes for authenticated users
+ - JWT-based authentication via Supabase Auth
+ - Secure session management with auto-refresh
+ - Protected routes for authenticated users
 
 # Authorization
-- Role-based access control (RBAC)
-- Three roles: admin, analyst, viewer
-- Row Level Security (RLS) policies on all tables
+ - Role-based access control (RBAC)
+ - Three roles: admin, analyst, viewer
+ - Row Level Security (RLS) policies on all tables
 
 # Data Protection
-- All API keys stored as environment variables
-- Sensitive operations require admin role
-- Comprehensive audit logging
+ - All API keys stored as environment variables
+ - Sensitive operations require admin role
+ - Comprehensive audit logging
 
 See SECURITY.md for security policy and vulnerability reporting.
 
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
+   Contributions are welcome! Please follow these steps:
 
  - Fork the repository
  - Create a feature branch (git checkout -b feature/amazing-feature)
@@ -87,6 +89,6 @@ Contributions are welcome! Please follow these steps:
    
 ## License
 
-This project is licensed under the MIT License .
+This project is licensed under the MIT License.
 
 Built with for cybersecurity professionals
